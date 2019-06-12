@@ -45,7 +45,8 @@ defmodule MediumGraphApi.MixProject do
       {:argon2_elixir, "~> 2.0"},
       {:absinthe, "~> 1.4"},
       {:absinthe_plug, "~> 1.4"},
-      {:absinthe_ecto, "~> 0.1"}
+      {:absinthe_ecto, "~> 0.1"},
+      {:guardian, "~> 1.0"}
     ]
   end
 
