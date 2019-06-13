@@ -24,8 +24,8 @@ config :logger, :console,
 
 # Configures Guardian
 config :medium_graph_api, MediumGraphApi.Guardian,
-       issuer: "medium_graph_api",
-       secret_key: "1GAj+5kMc1fl09KCLefmhajBwv8/OaDv8sESe53GxM3PHRggt+0OK6Op+VfewH9F"
+  issuer: "medium_graph_api",
+  secret_key: "1GAj+5kMc1fl09KCLefmhajBwv8/OaDv8sESe53GxM3PHRggt+0OK6Op+VfewH9F"
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason

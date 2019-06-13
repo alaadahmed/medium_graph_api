@@ -3,13 +3,13 @@ defmodule MediumGraphApi.Accounts.User do
   import Ecto.Changeset
 
   schema "users" do
-    field :first_name, :string
-    field :last_name, :string
-    field :email, :string, unique: true
-    field :password_hash, :string
-    field :password, :string, virtual: true
-    field :password_confirmation, :string, virtual: true
-    field :role, :string, default: "user"
+    field(:first_name, :string)
+    field(:last_name, :string)
+    field(:email, :string, unique: true)
+    field(:password_hash, :string)
+    field(:password, :string, virtual: true)
+    field(:password_confirmation, :string, virtual: true)
+    field(:role, :string, default: "user")
 
     timestamps()
   end
