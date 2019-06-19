@@ -4,4 +4,5 @@ defmodule MediumGraphApiWeb.Schema.Types do
 
   import_types(Types.UserType)
   import_types(Types.SessionType)
+  import_types(Types.PostType)
 end

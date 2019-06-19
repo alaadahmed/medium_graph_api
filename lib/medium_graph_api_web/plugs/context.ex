@@ -12,8 +12,8 @@ defmodule MediumGraphApiWeb.Plugs.Context do
   end
 
   defp build_context(conn) do
-    with ["Bearer " <> token] <- get_req_header(conn, "Authorization"),
-         {:ok, claims} <- Guardian.decode_and_verify(token),
+    with ["bearer: " <> token] <- get_req_header(conn, "authorization"),
+         {:ok, claims} <- Guardian.resource_from_token(token),
          {:ok, user} <- Guardian.resource_from_claims(claims) do
       %{current_user: user}
     else

@@ -1,7 +1,7 @@
 defmodule MediumGraphApiWeb.Resolvers.UserResolver do
   alias MediumGraphApi.Accounts
 
-  def users(_, _, %{context: context}) do
+  def users(_, %{context: context}, _) do
     IO.inspect(context)
     {:ok, Accounts.list_users()}
   end

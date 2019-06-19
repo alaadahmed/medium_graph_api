@@ -13,7 +13,7 @@ defmodule MediumGraphApi.Accounts.Session do
 
   defp check_password(%User{} = user, params) do
     case user do
-      nil -> Argon2.no_user_verify()
+      nil -> Comeonin.Argon2.dummy_checkpw()
       _ -> Argon2.verify_pass(params.password, user.password_hash)
     end
   end
